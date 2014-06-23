@@ -1,0 +1,32 @@
+[apply]
+	whitespace = fix
+[user]
+	name = Disiok
+	email = simon_suo@hotmail.com
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	st = status --short
+	lg = log --oneline --decorate --graph
+	lga = log --oneline --decorate --graph --all
+	unadd = reset HEAD
+[github]
+	user = Disiok
+[gist]
+	browse = yes
+	private = no
+[merge]
+	tool = opendiff
+[push]
+	default = matching
+[help]
+	autocorrect = 1
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

@@ -1,0 +1,14 @@
+#Exclude everything
+*
+
+#Include files
+#Git configurations
+!.gitignore
+!.gitconfig
+
+#Fish configurations
+!.config/fish/config.fish
+
+#Bash configurations
+!.bash_profile
+
