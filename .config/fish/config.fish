@@ -1,6 +1,6 @@
-set -xg PATH $PATH ~/Development/android-sdk-macosx/platform-tools
-set -xg PATH $PATH ~/Development/android-sdk-macosx/tools
-set -xg PATH $PATH ~/usr/local/bin
+set -xU PATH $PATH ~/Development/android-sdk-macosx/platform-tools
+set -xU PATH $PATH ~/Development/android-sdk-macosx/tools
+set -xU PATH $PATH /usr/local/bin
 
 function showFiles
 	defaults write com.apple.finder AppleShowAllFiles YES 
