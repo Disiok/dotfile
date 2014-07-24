@@ -8,6 +8,7 @@
 
 #Fish configurations
 !.config/fish/config.fish
+!.config/fish/completions/brew.fish
 
 #Bash configurations
 !.bash_profile
