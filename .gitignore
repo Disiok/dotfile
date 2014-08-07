@@ -14,4 +14,4 @@
 !.bash_profile
 
 #Tmux configurations
-#!.tmux.conf
+!.tmux.conf
