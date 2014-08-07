@@ -15,3 +15,11 @@ end
 function getScreen
 	adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > screen.png
 end
+
+function ssh-es-master
+	ssh ec2-user@ec2-54-200-221-39.us-west-2.compute.amazonaws.com
+end
+
+function ssh-es-slave-1
+	ssh ec2-user@ec2-54-200-255-167.us-west-2.compute.amazonaws.com
+end
