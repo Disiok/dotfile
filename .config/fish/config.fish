@@ -28,3 +28,7 @@ end
 function ssh-es-slave-1
 	ssh ec2-user@ec2-54-200-255-167.us-west-2.compute.amazonaws.com
 end
+
+function ssh-waterloo
+	ssh -l sdsuo linux.student.cs.uwaterloo.ca
+end
