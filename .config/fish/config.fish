@@ -25,6 +25,11 @@ function jump-cs246-repo
 	cd ~/Dropbox/Waterloo\ 2014-2015/Academics\ 2A/CS246/repo/1149
 end
 
+function write-test
+	mvim test{$argv}.in
+	mvim test{$argv}.out	
+end	
+
 function ssh-es-master
 	ssh ec2-user@ec2-54-200-221-39.us-west-2.compute.amazonaws.com
 end
@@ -36,3 +41,6 @@ end
 function ssh-waterloo
 	ssh -Y sdsuo@linux.student.cs.uwaterloo.ca
 end
+
+set fish_function_path $fish_function_path "/usr/local/lib/python2.7/site-packages/powerline/bindings/fish"
+powerline-setup
