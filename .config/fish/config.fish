@@ -21,14 +21,25 @@ function remove-orig
 	echo All files removed
 end
 
-function jump-cs246-repo
-	cd ~/Dropbox/Waterloo\ 2014-2015/Academics\ 2A/CS246/repo/1149
+function repo
+	~/Dropbox/Waterloo\ 2014-2015/Academics\ 2A/CS246/repo/1149
 end
 
-function write-test
+function project
+	~/Dropbox/Waterloo\ 2014-2015/Academics\ 2A/CS246/chamber-crawler
+end
+
+function testfile
 	mvim test{$argv}.in
 	mvim test{$argv}.out	
-end	
+end
+
+function header
+	set upper (echo $argv | tr '[:lower:]' '[:upper:]')
+	echo \#ifndef ___{$upper}_H___ > {$argv}.h
+	echo \#define ___{$upper}_H___ >> {$argv}.h
+	echo \#endif >> {$argv}.h
+end
 
 function ssh-es-master
 	ssh ec2-user@ec2-54-200-221-39.us-west-2.compute.amazonaws.com
@@ -41,6 +52,3 @@ end
 function ssh-waterloo
 	ssh -Y sdsuo@linux.student.cs.uwaterloo.ca
 end
-
-set fish_function_path $fish_function_path "/usr/local/lib/python2.7/site-packages/powerline/bindings/fish"
-powerline-setup
