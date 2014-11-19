@@ -1,3 +1,5 @@
+set fish_greeting ""
+
 set -xg PATH ~/Development/android-sdk-macosx/platform-tools $PATH
 set -xg PATH ~/Development/android-sdk-macosx/tools $PATH
 set -xg PATH /usr/local/bin $PATH
