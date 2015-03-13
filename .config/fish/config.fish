@@ -1,10 +1,8 @@
 set fish_greeting ""
 
-set -xg PATH ~/Development/android-sdk-macosx/platform-tools $PATH
-set -xg PATH ~/Development/android-sdk-macosx/tools $PATH
-set -xg PATH /usr/local/bin $PATH
+set -xg ANDROID_HOME /usr/local/opt/android-sdk
 
-function show-fles
+function show-files
 	defaults write com.apple.finder AppleShowAllFiles YES 
 	killall Finder /System/Library/CoreServices/Finder.app
 end
