@@ -1,17 +1,20 @@
-#Exclude everything
+# Exclude everything
 *
 
-#Include files
-#Git configurations
+# Include files
+# Git configurations
 !.gitignore
 !.gitconfig
 
-#Fish configurations
+# Fish configurations
 !.config/fish/config.fish
 !.config/fish/completions/brew.fish
 
-#Bash configurations
+# Bash configurations
 !.bash_profile
 
-#Tmux configurations
+# Tmux configurations
 !.tmux.conf
+
+# Vim configurations
+!.vimrc
