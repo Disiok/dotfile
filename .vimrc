@@ -27,6 +27,8 @@ set title
 set hlsearch
 set incsearch
 set laststatus=2
+set colorcolumn=80
+color desert
 
 " Setting tabbing behaviour
 set tabstop=4
