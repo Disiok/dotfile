@@ -9,6 +9,7 @@
 	status = auto
 	branch = auto
 [alias]
+	gp = grep
 	br = branch
 	ci = commit
 	co = checkout
