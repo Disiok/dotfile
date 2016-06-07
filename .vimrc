@@ -10,9 +10,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Custom plugins
-Plugin 'https://github.com/scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'wincent/command-t'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " Required
@@ -36,12 +37,15 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-" Setting for YouCompleteMe
+" YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
-" Auto-open NERDTree and focus cursor in new document
-" autocmd VimEnter * NERDTree
-" autocmd VimEnter * wincmd p
+" NERDTree 
+" Open NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Map specific key to open NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " Powerline
 python from powerline.vim import setup as powerline_setup
