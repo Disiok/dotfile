@@ -19,23 +19,45 @@ Plugin 'wincent/command-t'
 call vundle#end()            " Required
 filetype plugin indent on    " Required
 
-" Non-Plugin settings
-inoremap jk <ESC>
+" Key mappings
 let mapleader = ","
-syntax enable
-set number
-set title
-set hlsearch
-set incsearch
-set laststatus=2
-set colorcolumn=80
-color desert
+inoremap jk <ESC>
+nnoremap <leader><space> :nohlsearch<CR>
 
-" Setting tabbing behaviour
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
+" Movement
+" Move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+" Move to beginning and end of line
+nnoremap B ^
+nnoremap ^ <nop>
+nnoremap E $
+nnoremap $ <nop>
+
+" Searching
+set hlsearch        " Highlight matches
+set incsearch       " Search as characters are entered
+set ignorecase
+
+" General
+set title
+set laststatus=2
+
+" UI
+set number          " Show line numbers
+set cursorline      " Highlight current line
+set wildmenu        " Visual autocomplete for command menu
+set colorcolumn=80  " Highlight overflow column
+
+" Colors
+colorscheme desert
+syntax enable
+
+" Tabbing behaviour
+set tabstop=4       " Number of visual spaces per tab
+set shiftwidth=4    " Number of spaces for indent and unindent
+set softtabstop=4   " Number of spaces in tab when editing
+set expandtab       " Tabs are spaces
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
